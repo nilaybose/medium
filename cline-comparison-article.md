@@ -2,6 +2,15 @@
 
 *A comprehensive comparison of AI coding assistants with real-world cost analysis and best practices*
 
+---
+
+**Credits & Resources:**
+- Cline Documentation - For autonomous AI coding capabilities and best practices
+- GitHub Copilot Documentation - For code completion features and usage guidelines  
+- Google Cloud $300 Free Credit - For testing and cost analysis of various AI models
+
+---
+
 ## **The AI Coding Assistant Spectrum**
 
 The modern developer's toolkit includes three distinct categories of AI assistants, each with unique strengths and cost implications:
