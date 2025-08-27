@@ -401,6 +401,129 @@ Cline will:
             </ol>
         </div>
 
+        <h3><strong>Advanced Model Selection Strategy</strong></h3>
+        
+        <p>One of Cline's most powerful cost optimization features is the ability to select different AI models for different phases of work. This strategic approach can reduce costs by 60-80% while maintaining high-quality results.</p>
+        
+        <div class="highlight-box success">
+            <h4><strong>The Plan vs Act Model Strategy:</strong></h4>
+            
+            <p><strong>Planning Phase - Use Cheaper Models:</strong></p>
+            <ul>
+                <li><strong>Claude 3.5 Haiku</strong> ($0.25 per 1M tokens) - For initial analysis and planning</li>
+                <li><strong>GPT-4o Mini</strong> ($0.15 per 1M tokens) - For code review and strategy</li>
+                <li><strong>Gemini 1.5 Flash</strong> ($0.075 per 1M tokens) - For simple planning tasks</li>
+            </ul>
+            
+            <p><strong>Acting Phase - Use Powerful Models:</strong></p>
+            <ul>
+                <li><strong>Claude 3.5 Sonnet</strong> ($3 per 1M tokens) - For complex implementation</li>
+                <li><strong>GPT-4o</strong> ($2.50 per 1M tokens) - For critical debugging</li>
+                <li><strong>o1-preview</strong> ($15 per 1M tokens) - For complex reasoning tasks</li>
+            </ul>
+        </div>
+        
+        <h4><strong>Real-World Model Selection Examples:</strong></h4>
+        
+        <div class="cost-breakdown">
+            <h4><strong>Example 1: Database Migration</strong></h4>
+            
+            <p><strong>Planning Phase (Haiku - $0.25/1M tokens):</strong></p>
+            <div class="code-block">
+"Analyze the current database schema in /db/schema.sql and plan a migration 
+to add user roles and permissions. List all tables that need changes and 
+identify potential conflicts."
+
+Cost: ~5K tokens = $1.25
+Output: Detailed migration plan with risk assessment
+            </div>
+            
+            <p><strong>Acting Phase (Sonnet - $3/1M tokens):</strong></p>
+            <div class="code-block">
+"Execute the migration plan: create the migration files, update the models, 
+and modify the authentication middleware. Test all changes."
+
+Cost: ~15K tokens = $45
+Output: Complete implementation with testing
+            </div>
+            
+            <p><strong>Total Cost: $46.25 vs $90 (using Sonnet for everything)</strong></p>
+            <p><strong>Savings: 49% cost reduction</strong></p>
+        </div>
+        
+        <div class="cost-breakdown">
+            <h4><strong>Example 2: Performance Optimization</strong></h4>
+            
+            <p><strong>Planning Phase (Gemini Flash - $0.075/1M tokens):</strong></p>
+            <div class="code-block">
+"Review the React app performance metrics and identify the top 5 bottlenecks. 
+Focus on bundle size, render performance, and API calls. Provide optimization priorities."
+
+Cost: ~8K tokens = $0.60
+Output: Prioritized optimization roadmap
+            </div>
+            
+            <p><strong>Acting Phase (Sonnet - $3/1M tokens):</strong></p>
+            <div class="code-block">
+"Implement the performance optimizations: lazy loading, memoization, 
+API caching, and bundle splitting. Measure improvements after each change."
+
+Cost: ~20K tokens = $60
+Output: Implemented optimizations with benchmarks
+            </div>
+            
+            <p><strong>Total Cost: $60.60 vs $84 (using Sonnet for everything)</strong></p>
+            <p><strong>Savings: 28% cost reduction</strong></p>
+        </div>
+        
+        <div class="cost-breakdown">
+            <h4><strong>Example 3: Bug Investigation</strong></h4>
+            
+            <p><strong>Planning Phase (GPT-4o Mini - $0.15/1M tokens):</strong></p>
+            <div class="code-block">
+"The checkout process fails intermittently. Analyze the error logs, 
+payment flow, and user reports to create a debugging strategy."
+
+Cost: ~12K tokens = $1.80
+Output: Systematic debugging approach with test cases
+            </div>
+            
+            <p><strong>Acting Phase (o1-preview - $15/1M tokens):</strong></p>
+            <div class="code-block">
+"Execute the debugging plan: reproduce the issue, trace the payment flow, 
+identify the race condition, and implement a robust fix with proper error handling."
+
+Cost: ~3K tokens = $45 (o1 uses fewer tokens due to internal reasoning)
+Output: Root cause identified and fixed
+            </div>
+            
+            <p><strong>Total Cost: $46.80 vs $180 (using o1 for everything)</strong></p>
+            <p><strong>Savings: 74% cost reduction</strong></p>
+        </div>
+        
+        <div class="highlight-box">
+            <h4><strong>Model Selection Guidelines:</strong></h4>
+            
+            <p><strong>Use Cheaper Models (Haiku, Mini, Flash) for:</strong></p>
+            <ul>
+                <li>Initial code analysis and understanding</li>
+                <li>Creating implementation plans and strategies</li>
+                <li>Code reviews and documentation</li>
+                <li>Simple refactoring tasks</li>
+                <li>Generating test cases and scenarios</li>
+            </ul>
+            
+            <p><strong>Use Premium Models (Sonnet, GPT-4o, o1) for:</strong></p>
+            <ul>
+                <li>Complex implementation and coding</li>
+                <li>Critical debugging and problem-solving</li>
+                <li>Architecture decisions with multiple trade-offs</li>
+                <li>Performance-critical optimizations</li>
+                <li>Security-sensitive implementations</li>
+            </ul>
+            
+            <p><strong>Pro Tip:</strong> Start every complex task with a planning phase using a cheaper model. This creates a clear roadmap that makes the expensive model more efficient and focused.</p>
+        </div>
         <h2><strong>GitHub Copilot: The Efficient Companion</strong></h2>
 
         <h3><span class="emoji">✅</span><strong>Copilot's Sweet Spot</strong></h3>
